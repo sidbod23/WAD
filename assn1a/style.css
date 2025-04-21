@@ -1,0 +1,452 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    background-color: #f5f9fc; /* Light blue background for the entire page */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #78a1ca; /* Dark blue */
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+nav .logo h1 {
+    color: #fff;
+    font-size: 1.8em;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links li {
+    display: inline;
+}
+
+nav .nav-links a {
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #1e90ff; /* Light blue for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 51, 102, 0.5); /* Dark blue overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero .btn {
+    background-color: #1e90ff; /* Light blue button */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #0066cc; /* Darker blue on hover */
+}
+
+/* Background Animation */
+.hero-background .circle-1,
+.hero-background .circle-2 {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    animation: pulse 10s infinite;
+}
+
+.hero-background .circle-1 {
+    width: 400px;
+    height: 400px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hero-background .circle-2 {
+    width: 600px;
+    height: 600px;
+    top: 30%;
+    right: 5%;
+    animation-delay: 5s;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0; /* Keep the image behind the text */
+}
+
+.skills {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-category {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 200px;
+    max-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.skill-category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.skill-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill-category ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Keyframe Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+    background-color: #e6f2ff; /* Light blue background */
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #003366; /* Dark blue for the heading */
+}
+
+.about p {
+    font-size: 1.2em;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Portfolio Section */
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #003366; /* Dark blue for the heading */
+}
+
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px); /* Lift the card on hover */
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Slight zoom effect on image */
+}
+
+/* Overlay */
+.portfolio-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 51, 102, 0.6); /* Dark blue overlay */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Title */
+.portfolio-item .overlay h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Description */
+.portfolio-item .overlay p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    font-weight: 300;
+    max-width: 250px;
+}
+
+/* GitHub Link */
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #1e90ff; /* Light blue button */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.github-link i {
+    margin-right: 8px;
+}
+
+.github-link:hover {
+    background-color: #0066cc; /* Darker blue on hover */
+}
+
+/* FontAwesome GitHub Icon */
+.github-link i {
+    font-size: 1.5em;
+}
+
+/* Coding Profiles Section */
+.coding-profiles {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.coding-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+}
+
+.coding-icon {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-align: center;
+    width: 120px; /* Fixed width for uniformity */
+}
+
+.coding-icon:hover {
+    transform: scale(1.1);
+    color: #0056b3;
+}
+
+.coding-icon img {
+    width: 60px; /* Fixed width for images */
+    height: 60px; /* Fixed height for images */
+    object-fit: cover; /* Ensures images don't get stretched */
+    margin-bottom: 10px; /* Space between the image and text */
+}
+
+.coding-icon span {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px; /* Space between the image and the text */
+}
+
+/* Hover effect for icons */
+.coding-icon:hover i {
+    color: #1e90ff;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f0f8ff; /* Lighter blue background */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    background-color: #e6f2ff; /* Light blue input fields */
+}
+
+.contact button {
+    background-color: #1e90ff; /* Light blue button */
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #0066cc; /* Darker blue on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #003366; /* Dark blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
